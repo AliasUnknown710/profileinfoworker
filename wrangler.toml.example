@@ -1,0 +1,42 @@
+name = "profile-info-worker"
+main = "index.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Environment variables (copy to wrangler.toml and fill in actual values)
+[vars]
+# AUTH_SECRET = "your-secret-key-here"
+# DATABASE_URL = "your-database-url-here"
+
+# Example KV bindings (uncomment if using KV storage)
+# [[kv_namespaces]]
+# binding = "PROFILES"
+# id = "your-kv-namespace-id"
+# preview_id = "your-preview-kv-namespace-id"
+
+# Example D1 database binding (uncomment if using D1)
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "profile-db"
+# database_id = "your-d1-database-id"
+
+# Example R2 bucket binding (uncomment if using R2)
+# [[r2_buckets]]
+# binding = "BUCKET"
+# bucket_name = "profile-assets"
+
+# Custom domains (uncomment and configure if using custom domains)
+# [routes]
+# patterns = ["api.yourdomain.com/profile/*"]
+# zone_id = "your-zone-id"
+
+# Worker limits and configuration
+[limits]
+cpu_ms = 50
+
+# CORS configuration (uncomment if needed)
+# [cors]
+# origins = ["https://yourdomain.com", "https://www.yourdomain.com"]
+# methods = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+# headers = ["Content-Type", "Authorization"]
+# max_age = 86400
